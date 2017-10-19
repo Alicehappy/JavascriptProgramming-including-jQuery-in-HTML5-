@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-div {
-    border: 1px solid black;
-    margin: 15px;
-}
-</style>
-</head>
 <body>
 
-<p>Click the button to get the node name of the DIV's first child node.</p>
-
-<div id="myDIV"><p>A P element - First child in div</p><span>A Span element - Last child in div</span></div>
+<select id="mySelect" size="4"><option>Audi</option><option>BMW</option><option>Saab</option><option>Volvo</option></select><br><br>
 
 <button onclick="myFunction()">Try it</button>
 
@@ -20,7 +10,7 @@ div {
 
 <script>
 function myFunction() {
-    var x = document.getElementById("myDIV").firstChild.nodeName;
+    var x = document.getElementById("mySelect").firstChild.text;
     document.getElementById("demo").innerHTML = x;
 }
 </script>
