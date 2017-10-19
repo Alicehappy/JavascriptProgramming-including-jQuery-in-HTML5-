@@ -3,40 +3,31 @@
 <head>
 <style>
 div {
-    background-color: coral;
-    border: 1px solid;
-    padding: 50px;
+    border: 1px solid black;
+    margin: 15px;
 }
 </style>
 </head>
 <body>
 
-<p>This example demonstrates the difference between bubbling and capturing when adding event listeners.</p>
+<p>Click the button get the node name of the DIV's first child node.</p>
 
-<div id="myDiv">
-  <p id="myP">Click this paragraph, I am Bubbling.</p>
-</div><br>
-
-<div id="myDiv2">
-  <p id="myP2">Click this paragraph, I am Capturing.</p>
+<div id="myDIV">
+  <p>A P element - Second child in div</p>
+  <span>A Span element - Fourth child in div</span>
 </div>
 
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> Whitespace inside elements is considered as text, and text is considered as nodes. Therefore, in this example, the first, third and fifth child of the div element is a #text node.</p>
+
+<p id="demo"></p>
+
 <script>
-document.getElementById("myP").addEventListener("click", function() {
-    alert("You clicked the P element!");
-}, false);
-
-document.getElementById("myDiv").addEventListener("click", function() {
-    alert("You clicked the DIV element!");
-}, false);
-
-document.getElementById("myP2").addEventListener("click", function() {
-    alert("You clicked the P element!");
-}, true);
-
-document.getElementById("myDiv2").addEventListener("click", function() {
-    alert("You clicked the DIV element!");
-}, true);
+function myFunction() {
+    var x = document.getElementById("myDIV").firstChild.nodeName;
+    document.getElementById("demo").innerHTML = x;
+}
 </script>
 
 </body>
