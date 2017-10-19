@@ -2,22 +2,17 @@
 <html>
 <body>
 
-<table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
-</table>
+<p>Example list:</p>
+<ul id="myList"><li>Coffee</li><li>Tea</li></ul>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
 
 <script>
-var el = document.getElementById("outside");
-el.addEventListener("click", modifyText, false);
-
-function modifyText() {
-    var t2 = document.getElementById("t2");
-    if (t2.firstChild.nodeValue == "three") {
-      t2.firstChild.nodeValue = "two";
-    } else {
-      t2.firstChild.nodeValue = "three";
-    }
+function myFunction() {
+    var list = document.getElementById("myList").firstChild.innerHTML;
+    document.getElementById("demo").innerHTML = list;
 }
 </script>
 
