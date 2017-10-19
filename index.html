@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+div {
+    background-color: coral;
+    border: 1px solid;
+    padding: 50px;
+}
+</style>
+</head>
 <body>
 
-<p>Example list:</p>
-<ul id="myList"><li>Coffee</li><li>Tea</li></ul>
+<p>This example demonstrates the difference between bubbling and capturing when adding event listeners.</p>
 
-<button onclick="myFunction()">Try it</button>
+<div id="myDiv">
+  <p id="myP">Click this paragraph, I am Bubbling.</p>
+</div><br>
 
-<p id="demo"></p>
+<div id="myDiv2">
+  <p id="myP2">Click this paragraph, I am Capturing.</p>
+</div>
 
 <script>
-function myFunction() {
-    var list = document.getElementById("myList").firstChild.innerHTML;
-    document.getElementById("demo").innerHTML = list;
-}
+document.getElementById("myP").addEventListener("click", function() {
+    alert("You clicked the P element!");
+}, false);
+
+document.getElementById("myDiv").addEventListener("click", function() {
+    alert("You clicked the DIV element!");
+}, false);
+
+document.getElementById("myP2").addEventListener("click", function() {
+    alert("You clicked the P element!");
+}, true);
+
+document.getElementById("myDiv2").addEventListener("click", function() {
+    alert("You clicked the DIV element!");
+}, true);
 </script>
 
 </body>
