@@ -2,9 +2,11 @@
 <html>
 <body>
 
-<p><a id="myAnchor" target="_self" href="https://www.w3schools.com/">W3Schools</a></p>
+<p><a id="myAnchor" href="https://www.w3schools.com">W3Schools</a></p>
 
-<p>Click the button to display the value of the target attribute of the link above.</p>
+<p>Click the button to set the value of the target attribute of the link above to "_blank".</p>
+
+<p><b>Note:</b> Try the link before and after you have clicked the button!</p>
 
 <button onclick="myFunction()">Try it</button>
 
@@ -12,8 +14,8 @@
 
 <script>
 function myFunction() {
-    var x = document.getElementById("myAnchor").target;
-    document.getElementById("demo").innerHTML = x;
+    document.getElementById("myAnchor").target = "_blank";
+    document.getElementById("demo").innerHTML = "The value of the target attribute was set.";
 }
 </script>
 
