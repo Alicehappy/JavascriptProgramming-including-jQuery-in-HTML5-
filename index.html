@@ -2,9 +2,12 @@
 <html>
 <body>
 
-<p id="myP">I am a paragraph.</p>
+<ul id="myList">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
 
-<p>Click the button get the HTML content of the p element.</p>
+<p>Click the button get the HTML content of the ul element.</p>
 
 <button onclick="myFunction()">Try it</button>
 
@@ -12,7 +15,7 @@
 
 <script>
 function myFunction() {
-    var x = document.getElementById("myP").innerHTML;
+    var x = document.getElementById("myList").innerHTML;
     document.getElementById("demo").innerHTML = x;
 }
 </script>
