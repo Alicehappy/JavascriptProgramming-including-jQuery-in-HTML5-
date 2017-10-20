@@ -2,16 +2,15 @@
 <html>
 <body>
 
-<h1>My Web Page</h1>
+<p id="demo">Click the button to alert the text of this paragraph.</p>
 
-<p id="myP">This is a p element.</p>
-
-<div id="myDIV">This is a div element.</div>
+<button onclick="myFunction()">Try it</button>
 
 <script>
-document.getElementById("myP").innerHTML = "Hello Dolly.";
-document.getElementById("myDIV").innerHTML = "How are you?";
+function myFunction() {
+    alert(document.getElementById("demo").innerHTML);
+}
 </script>
 
 </body>
-</html>
+</html> 
