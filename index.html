@@ -2,13 +2,13 @@
 <html>
 <body>
 
-<p id="demo">Click the button to alert the text of this paragraph.</p>
+<p id="demo">Click the button to delete my HTML content (innerHTML).</p>
 
 <button onclick="myFunction()">Try it</button>
 
 <script>
 function myFunction() {
-    alert(document.getElementById("demo").innerHTML);
+    document.getElementById("demo").innerHTML = "";
 }
 </script>
 
