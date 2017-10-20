@@ -2,15 +2,20 @@
 <html>
 <body>
 
-<p id="demo">Click the button to delete my HTML content (innerHTML).</p>
+<p><a id="myAnchor" target="_self" href="https://www.w3schools.com/">W3Schools</a></p>
+
+<p>Click the button to display the value of the target attribute of the link above.</p>
 
 <button onclick="myFunction()">Try it</button>
 
+<p id="demo"></p>
+
 <script>
 function myFunction() {
-    document.getElementById("demo").innerHTML = "";
+    var x = document.getElementById("myAnchor").target;
+    document.getElementById("demo").innerHTML = x;
 }
 </script>
 
 </body>
-</html> 
+</html>
