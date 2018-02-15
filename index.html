@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+});
+</script>
+</head>
 <body>
 
-<div ng-app="" ng-init="myText='Hello World!'">
-
-<h1>{{myText}}</h1>
-
-<p>The ng-init directive has created an AngularJS variable, which you can use in the application.</p>
-
-</div>
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
 
 </body>
 </html>
